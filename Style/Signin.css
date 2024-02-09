@@ -61,6 +61,8 @@
   }
 
   .div-5 {
+    font-weight: 700;
+    color: #033256;
     font-family: Poppins, sans-serif;
     margin-top: 20px;
   }
@@ -93,6 +95,8 @@
   }
 
   .div-7 {
+    font-weight: 700;
+    color: #033256;
     font-family: Poppins, sans-serif;
     margin-top: 52px;
   }
@@ -144,6 +148,7 @@
   }
 
   .div-10 {
+    color: #033256;
     font-weight: 700;
     font-size: 20px;
     font-family: Poppins, sans-serif;
@@ -163,6 +168,7 @@
   }
 
   .div-11 {
+    color: #033256;
     font-weight: 700;
     font-size: 20px;
     font-family: Poppins, sans-serif;
