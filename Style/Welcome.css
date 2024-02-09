@@ -1,0 +1,116 @@
+.main-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #033256;
+    white-space: nowrap;
+    padding: 50px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .main-container {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+
+  .header {
+    display: flex;
+    margin-top: 0px;
+    width: 602px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      margin-top: 40px;
+      white-space: initial;
+    }
+  }
+
+  .title {
+    font: 600 49px Poppins, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .title {
+      font-size: 40px;
+      white-space: initial;
+    }
+  }
+
+  .image {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+    align-self: stretch;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 991px) {
+    .image {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .div-4 {
+    display: flex;
+    margin-top: 14px;
+    width: 481px;
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 34px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 991px) {
+    .div-4 {
+      flex-wrap: wrap;
+      white-space: initial;
+    }
+  }
+
+  .signin-btn {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    border-radius: 255px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    background-color: #57e5f2;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 19px 51px;
+  }
+
+  @media (max-width: 991px) {
+    .signin-btn {
+      white-space: initial;
+      padding: 0 23px 0 20px;
+    }
+  }
+
+  .exit-btn {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    border-radius: 255px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    background-color: #08a7ce;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .exit-btn {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
