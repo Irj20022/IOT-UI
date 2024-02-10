@@ -152,89 +152,80 @@ active{
 }
 
 
-/* form */
-.main-container {
-    height: 600px;
-    width: 100%;
+.main-container{
     border-radius: 15px;
-    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
-    background-color: #d3f8fb;
-    display: flex;
-    flex-direction: column;
-    font-size: 43px;
+    position: relative;
+    background: #d0f6ff;
+    width: 100%;
+    height: 550px;
+    padding: 1rem;
+
+}
+.input-box-1{
+    background: none;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+.datename{
+    font-size: 25px;
+    font-weight: 700;
     color: #033256;
-    font-weight: 400;
-    padding: 50px 71px;
-  }
+}
+.datel{
+    background: #ffff;
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-  @media (max-width: 991px) {
-    .main-container {
-      padding: 0 20px;
-    }
-  }
+.input-box-2{
+    background: none;
+    border-radius: 15px;
+    padding: 2rem;
+}
+.turtlename{
+    font-size: 25px;
+    font-weight: 700;
+    color: #033256;
 
+}
+.text{
+    background: #ffff;
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
 
-  form {
+.button-wrapper{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 149px;
-    max-width: 100%;
-  }
+    align-items: end;
+    margin-top: 20px;
+}
 
-  .input-box-1{
-    width: 100%
-    flex-grow: 1;
-  }
-
-  .input-wrapper label{
-    margin-left: 10px;
-  }
-
-  .button-wrapper {
-    align-self: end;
-    display: flex;
-    margin-top: 36px;
-    width: 463px;
-    max-width: 100%;
-    gap: 15px;
-    font-size: 34px;
-    color: #fff;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 991px) {
-    .button-wrapper {
-      flex-wrap: wrap;
-      white-space: initial;
-    }
-  }
-
-  .button-primary {
-    font-family: Poppins, sans-serif;
-    border-radius: 255px;
-    background-color: #08a7ce;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 60px;
-  }
-
-  .button-secondary {
-    font-family: Poppins, sans-serif;
-    border-radius: 255px;
-    background-color: #033256;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 60px;
-  }
-
-  @media (max-width: 991px) {
-    .button-primary,
-    .button-secondary {
-      white-space: initial;
-      padding: 0 20px;
-    }
-  }
+.button-primary{
+    margin-left: 30px;
+    background: #033256;
+    color: #ffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.button-secondary{
+    background: #ffff;
+    color: #033256;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
