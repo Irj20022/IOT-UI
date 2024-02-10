@@ -3,7 +3,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
 body{
@@ -92,4 +92,36 @@ active{
     background: #ffff;
     border-radius: 15px;
     padding: 10px 2rem;
+    margin-bottom: 1rem;
+
 }
+.header-title{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #033256;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.search-box{
+    background: #dbdbdb;
+    border-radius: 15px;
+    color: #033256;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 12px;
+
+}
+.search-box input{
+    padding: 10px;
+    background: transparent;
+}
+.search-box i{
+    font-size: 1.2rem;
+    color: #033256;
+}
+
+/*card container*/
