@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: aliceblue;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #033256;
+
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    font-weight: 500;
+    margin-top: 50%;
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+
+}
+.menu li:hover,
+active{
+    background-color: #08a7ce;
+}
+
+.menu a {
+    color: #ffff;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    top: 700;
+    left: 0;
+    width: 100%;
+    
+}
+/*main body section*/
+.main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+
+}
+.header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%; 
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ffff;
+    border-radius: 15px;
+    padding: 10px 2rem;
+}

@@ -2,97 +2,60 @@
     <head>
         <title>Dashboard</title>
         <link rel="stylesheet" type="text/css" href="/Style/Dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
-    <div class="header">
-        <header class="main-container">Home</header>
-        <header class="sensors">Sensors</header>
-        <header class="data-input">Data Input</header>
-        <header class="data-output">Data Output</header>
-      </div>
-      
-      <style>
-        .header {
-          background-color: #033256;
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-          font-size: 49px;
-          color: #fff;
-          font-weight: 600;
-          white-space: nowrap;
-          width: 100%;
-          padding: 50px 79px 0 35px;
-        }
-      
-        @media (max-width: 991px) {
-          .header {
-            max-width: 100%;
-            margin-top: 35px;
-            font-size: 40px;
-            white-space: initial;
-            padding: 0 20px;
-          }
-        }
-      
-        .main-container {
-          font-family: Poppins, sans-serif;
-          border-radius: 43px;
-          background-color: #fff;
-          margin-top: 176px;
-          justify-content: center;
-          color: #033256;
-          padding: 32px 33px;
-        }
-      
-        @media (max-width: 991px) {
-          .main-container {
-            font-size: 40px;
-            white-space: initial;
-            margin: 40px 4px 0 0;
-            padding: 0 20px;
-          }
-        }
-      
-        .sensors {
-          font-family: Poppins, sans-serif;
-          align-self: start;
-          margin: 59px 0 0 33px;
-        }
-      
-        @media (max-width: 991px) {
-          .sensors {
-            font-size: 40px;
-            margin: 40px 0 0 10px;
-          }
-        }
-      
-        .data-input {
-          font-family: Poppins, sans-serif;
-          align-self: start;
-          margin: 92px 0 0 39px;
-        }
-      
-        @media (max-width: 991px) {
-          .data-input {
-            font-size: 40px;
-            white-space: initial;
-            margin: 40px 0 0 10px;
-          }
-        }
-      
-        .data-output {
-          font-family: Poppins, sans-serif;
-          align-self: end;
-          margin: 78px 0 0 29px;
-        }
-      
-        @media (max-width: 991px) {
-          .data-output {
-            font-size: 40px;
-            white-space: initial;
-            margin: 40px 4px 0 0;
-          }
-        }
-      </style>
+    <body>
+        <div class="sidebar">
+          <div class="logo">
+            <ul class="menu">
+              <li class="active">
+                <a href="#">
+                  <i class="fas fa-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span>Sensors</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-download"></i>
+                  <span>Data Input</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>Data Output</span>
+                </a>
+              </li>
+              <li class="logout">
+                <a href="#">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="header-wrapper">
+            <div class="header-title">
+              <span>Primary</span>
+              <h2>Dashboard</h2>
+            </div>
+            <div class="user-info">
+              <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Search...">
+              </div>
+              <img src="/Images/bluett.jpg" alt="">
+            </div>
+            </div>
+          </div>
+        </div>
     </body>
 </html>
