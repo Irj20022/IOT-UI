@@ -202,3 +202,78 @@ active{
     background: #08a7ce;
     color: #ffff;
 }
+
+/* sensor cards*/
+
+.sensor-card-container{
+    margin-top: 1rem;
+    background: #ffff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+.sensor-card-wrapper{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.sensor01-card{
+    background: #d0f6ff;
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+
+}
+.sensor01-card:hover{
+    box-shadow: 2px 2px 0 2px #4b4b4b36;
+    transform: translateY(-5px);
+    background: #08a7ce;
+    color: #ffff;
+}
+.sensor02-card{
+    background: #d0f6ff;
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+
+}
+.sensor02-card:hover{
+    box-shadow: 2px 2px 0 2px #4b4b4b36;
+    transform: translateY(-5px);
+    background: #08a7ce;
+    color: #ffff;
+}
+.sensor03-card{
+    background: #d0f6ff;
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+
+}
+.sensor03-card:hover{
+    box-shadow: 2px 2px 0 2px #4b4b4b36;
+    transform: translateY(-5px);
+    background: #08a7ce;
+    color: #ffff;
+}
+.sensor-title{
+    color: #033256;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
