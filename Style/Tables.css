@@ -141,7 +141,7 @@ active{
 }
 
 table{
-    width: 50%;
+    width: 100%;
     border-collapse: collapse;
 }
 thead{
@@ -160,7 +160,7 @@ td{
     text-align: left;
 }
 tr:nth-child(even){
-    background: #dbdbdb;
+    background: #a6dcff;
 }
 tfoot{
     background: #033256;
@@ -172,55 +172,3 @@ tfoot td{
     text-align: left;
 }
 
-/* sensor card*/
-.card-wrapper{
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.main-title{
-    color: #033256;
-    padding-bottom: 10px;
-    font-size: 20px;
-}
-.sensor-card{
-    background: #d0f6ff;
-    border-radius: 15px;
-    padding: 1.2rem;
-    width: 40%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.5s ease-in-out;
-
-}
-.sensor-card:hover{
-    box-shadow: 2px 2px 0 2px #4b4b4b36;
-    transform: translateY(-5px);
-    background: #08a7ce;
-    color: #ffff;
-}
-.card-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.ammount{
-    display: flex;
-    flex-direction: column;
-}
-.title{
-    font-size: 25px;
-    font-weight: 700;
-}
-.ammount-value{
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 800;
-    padding-top: 20px;
-}
