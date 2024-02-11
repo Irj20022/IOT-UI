@@ -15,7 +15,7 @@ body{
     left: 0;
     bottom: 0;
     width: 310px;
-    height: 100vh;
+    height: 1400px;
     padding: 0 1.7rem;
     color: aliceblue;
     overflow: hidden;
@@ -126,6 +126,7 @@ active{
 
 /*card container*/
 .card-container{
+    margin-top: 1rem;
     background: #ffff;
     padding: 2rem;
     border-radius: 15px;
@@ -157,17 +158,18 @@ active{
     position: relative;
     background: #d0f6ff;
     width: 100%;
-    height: 550px;
+    height: 10%;
     padding: 1rem;
 
 }
 .input-box-1{
     background: none;
     border-radius: 15px;
-    padding: 2rem;
-    margin-top: 1rem;
+    padding: 1rem;
+    margin-top: 0rem;
 }
 .datename{
+    margin-top: 0%;
     font-size: 25px;
     font-weight: 700;
     color: #033256;
@@ -185,7 +187,7 @@ active{
 .input-box-2{
     background: none;
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1rem;
 }
 .turtlename{
     font-size: 25px;
@@ -196,18 +198,18 @@ active{
 .text{
     background: #ffff;
     width: 100%;
-    height: 20%;
+    height: 10%;
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .button-wrapper{
     display: flex;
     align-items: end;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .button-primary{
