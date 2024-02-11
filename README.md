@@ -1,1 +1,3 @@
-Concept IOT UI changes to made yet
+IOT UI finalised version
+frontend only
+CSS and HTML
