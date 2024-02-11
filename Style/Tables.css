@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: aliceblue;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #033256;
+
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    font-weight: 500;
+    margin-top: 50%;
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+
+}
+.menu li:hover,
+active{
+    background-color: #08a7ce;
+}
+
+.menu a {
+    color: #ffff;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    top: 700;
+    left: 0;
+    width: 100%;
+    
+}
+/*main body section*/
+.main-content{
+    position: realative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+
+}
+.header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%; 
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ffff;
+    border-radius: 15px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+
+}
+.header-title{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #033256;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.search-box{
+    background: #dbdbdb;
+    border-radius: 15px;
+    color: #033256;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 12px;
+
+}
+.search-box input{
+    padding: 10px;
+    background: transparent;
+}
+.search-box i{
+    font-size: 1.2rem;
+    color: #033256;
+}
+
+/* tabels*/ 
+.tabular-wrapper{
+    background: #ffff;
+    margin-top: 1rem;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.table-container{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+thead{
+    background: #033256;
+    color: #ffff;
+}
+th{
+    padding: 7px;
+    text-align: left;
+}
+tbody{
+    background: #d0f6ff;
+}
+td{
+    padding: 7px;
+    text-align: left;
+}
+tr:nth-child(even){
+    background: #dbdbdb;
+}
+tfoot{
+    background: #033256;
+    color: #ffff;
+    font-weight: bold;
+}
+tfoot td{
+    padding: 7px;
+    text-align: left;
+}
+
+/* sensor card*/
+.card-wrapper{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-title{
+    color: #033256;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.sensor-card{
+    background: #d0f6ff;
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 40%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+
+}
+.sensor-card:hover{
+    box-shadow: 2px 2px 0 2px #4b4b4b36;
+    transform: translateY(-5px);
+    background: #08a7ce;
+    color: #ffff;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ammount{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 25px;
+    font-weight: 700;
+}
+.ammount-value{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    padding-top: 20px;
+}
