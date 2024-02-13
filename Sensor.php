@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="/Style/Sensor.css">
+        <link rel="stylesheet" type="text/css" href="Style/Sensor.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
@@ -10,31 +10,31 @@
           <div class="logo">
             <ul class="menu">
               <li class="active">
-                <a href="Dashboard.html">
+                <a href="Dashboard.php">
                   <i class="fas fa-home"></i>
                   <span>Home</span>
                 </a>
               </li>
               <li>
-                <a href="Sensor.html">
+                <a href="Sensor.php">
                   <i class="fas fa-tachometer-alt"></i>
                   <span>Sensors</span>
                 </a>
               </li>
               <li>
-                <a href="DataInput.html">
+                <a href="DataInput.php">
                   <i class="fas fa-download"></i>
                   <span>Data Input</span>
                 </a>
               </li>
               <li>
-                <a href="Tables.html">
+                <a href="Tables.php">
                   <i class="fas fa-chart-bar"></i>
                   <span>Data Output</span>
                 </a>
               </li>
               <li class="logout">
-                <a href="Welcome.html">
+                <a href="Welcome.php">
                   <i class="fas fa-sign-out-alt"></i>
                   <span>Log Out</span>
                 </a>
