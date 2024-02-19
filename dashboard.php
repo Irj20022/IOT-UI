@@ -1,3 +1,42 @@
+<?php
+// Assuming you have a database connection established
+include 'config.php';
+
+// Define the quality threshold for each sensor
+$tempThreshold =  30; // Example threshold for temperature
+$phThreshold =  7.5; // Example threshold for pH
+$turbidityThreshold =  5; // Example threshold for turbidity
+
+// Fetch the latest data from each sensor table
+$sqlTemp = "SELECT temp FROM tempdata ORDER BY id DESC LIMIT  1";
+$sqlpHData = "SELECT reading FROM phdata ORDER BY id DESC LIMIT  1";
+$sqlTurbidity = "SELECT reading FROM tdpdata ORDER BY id DESC LIMIT  1";
+
+// Execute the queries and fetch the results
+$resultTemp = $conn->query($sqlTemp);
+$resultpHData = $conn->query($sqlpHData);
+$resultTurbidity = $conn->query($sqlTurbidity);
+
+// Check if there's a result for each sensor and fetch the data
+$temp = $resultTemp->num_rows >  0 ? $resultTemp->fetch_assoc()['temp'] : "No data";
+$phData = $resultpHData->num_rows >  0 ? $resultpHData->fetch_assoc()['reading'] : "No data";
+$turbidity = $resultTurbidity->num_rows >  0 ? $resultTurbidity->fetch_assoc()['reading'] : "No data";
+
+// Determine the quality based on the sensor readings
+$quality = "good";
+if ($temp > $tempThreshold || $phData > $phThreshold || $turbidity > $turbidityThreshold) {
+    $quality = "bad";
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
+
+
+
+
 <html>
     <head>
         <title>Dashboard</title>
@@ -55,7 +94,7 @@
                 <i class="fa-solid fa-search-alt"></i>
                 <input type="text" placeholder="Search...">
               </div>
-              <img src="/Images/bluett.jpg" alt="">
+              <img src="Images/bluett.jpg" alt="">
             </div>
             </div>
 <!-- Year Cards begin -->
@@ -69,7 +108,7 @@
                         Released Turtles
                       </span>
                       <span class="ammount-value">
-                        1000
+                        200
                       </span>
                     </div>
                   </div>
@@ -97,10 +136,10 @@
                   <div class="card-header">
                     <div class="ammount">
                       <span class="sensor-title">
-                        Sensor 01 Data
+                       Temperature sensor
                       </span>
                       <span class="ammount-value">
-                        20
+                      <?php echo $temp?>
                       </span>
                     </div>
                   </div>
@@ -109,10 +148,10 @@
                   <div class="card-header">
                     <div class="ammount">
                       <span class="sensor-title">
-                        Sensor 02 Data
+                      pH sensor
                       </span>
                       <span class="ammount-value">
-                        50
+                      <?php echo $phData?>
                       </span>
                     </div>
                   </div>
@@ -121,10 +160,10 @@
                   <div class="card-header">
                     <div class="ammount">
                       <span class="sensor-title">
-                        Sensor 03 Data
+                      Turbidity sensor
                       </span>
                       <span class="ammount-value">
-                        10
+                        <?php echo $turbidity?>
                       </span>
                     </div>
                   </div>
@@ -143,7 +182,7 @@
             Water Quality
           </span>
           <span class="quality-value">
-            GOOD
+          <?php echo $quality?>
           </span>
         </div>
       </div>

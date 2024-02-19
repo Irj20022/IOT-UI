@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php if (!empty($error_message)): ?>
                     <div class="error"><?php echo htmlspecialchars($error_message); ?></div>
                 <?php endif; ?>
-                <form method="post" action="login.php">
+                <form method="post" action="Signin.php">
                     <div class="div-5">User name:</div>
                     <input class="div-6" type="text" name="username" aria-label="Enter Username here" required>
                     <div class="div-7">Password:</div>
