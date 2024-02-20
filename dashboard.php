@@ -3,14 +3,14 @@
 include 'config.php';
 
 // Define the quality threshold for each sensor
-$tempThreshold =  30; // Example threshold for temperature
-$phThreshold =  7.5; // Example threshold for pH
-$turbidityThreshold =  5; // Example threshold for turbidity
+$tempThreshold =   30; // Example threshold for temperature
+$phThreshold =   7.5; // Example threshold for pH
+$turbidityThreshold =   5; // Example threshold for turbidity
 
 // Fetch the latest data from each sensor table
-$sqlTemp = "SELECT temp FROM tempdata ORDER BY id DESC LIMIT  1";
-$sqlpHData = "SELECT reading FROM phdata ORDER BY id DESC LIMIT  1";
-$sqlTurbidity = "SELECT reading FROM tdpdata ORDER BY id DESC LIMIT  1";
+$sqlTemp = "SELECT temp FROM tempdata ORDER BY id DESC LIMIT   1";
+$sqlpHData = "SELECT reading FROM phdata ORDER BY id DESC LIMIT   1";
+$sqlTurbidity = "SELECT reading FROM tdpdata ORDER BY id DESC LIMIT   1";
 
 // Execute the queries and fetch the results
 $resultTemp = $conn->query($sqlTemp);
@@ -18,9 +18,9 @@ $resultpHData = $conn->query($sqlpHData);
 $resultTurbidity = $conn->query($sqlTurbidity);
 
 // Check if there's a result for each sensor and fetch the data
-$temp = $resultTemp->num_rows >  0 ? $resultTemp->fetch_assoc()['temp'] : "No data";
-$phData = $resultpHData->num_rows >  0 ? $resultpHData->fetch_assoc()['reading'] : "No data";
-$turbidity = $resultTurbidity->num_rows >  0 ? $resultTurbidity->fetch_assoc()['reading'] : "No data";
+$temp = $resultTemp->num_rows >   0 ? $resultTemp->fetch_assoc()['temp'] : "No data";
+$phData = $resultpHData->num_rows >   0 ? $resultpHData->fetch_assoc()['reading'] : "No data";
+$turbidity = $resultTurbidity->num_rows >   0 ? $resultTurbidity->fetch_assoc()['reading'] : "No data";
 
 // Determine the quality based on the sensor readings
 $quality = "good";
@@ -28,7 +28,17 @@ if ($temp > $tempThreshold || $phData > $phThreshold || $turbidity > $turbidityT
     $quality = "bad";
 }
 
-// Close the database connection
+// // Define the CSS styles for when quality is bad
+// $badQualityStyles = "";
+// if ($quality === "bad") {
+//     $badQualityStyles = "
+//         body {
+//             background-color: red;
+//             color: white;
+//         }
+//     "; 
+// }
+
 $conn->close();
 ?>
 
@@ -40,7 +50,7 @@ $conn->close();
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="   Style/Dashboard.css">
+        <link rel="stylesheet" type="text/css" href=" Style/Dashboard.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
