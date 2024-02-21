@@ -2,6 +2,13 @@
 
 include("config.php");
 
+function function_alert($message) { 
+      
+  // Display the alert box  
+  echo "<script>alert('$message');</script>"; 
+} 
+
+
 if(isset($_POST['tank1'])){
   // Check if the form data has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Execute the query
   if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
+      function_alert("Tank one new record created successfully"); 
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
@@ -41,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Execute the query
   if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
+    function_alert("Tank two new record created successfully"); 
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
@@ -64,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Execute the query
   if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
+    function_alert("Tank three new record created successfully"); 
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
@@ -164,7 +171,7 @@ mysqli_close($conn);
             <h1 class="main-title">Add Tank 02 Data</h1>
             <div class="card-wrapper">
                 <div class="main-container">
-                      <form>
+                <form method="POST" action="DataInput.php">
                         <div class="input-box-1">
                           <label for="date" class="datename">Date</label>
                           <input type="date" id="date" name="date" class="datel">
@@ -174,7 +181,7 @@ mysqli_close($conn);
                           <input type="text" id="turtle" name="turtle" class="text">
                         </div>
                       <div class="button-wrapper">
-                        <button type="button" class="button-primary" aria-label="Add" name="tank2">Add</button>
+                        <button type="submit" class="button-primary" aria-label="Add" name="tank2">Add</button>
                         <button type="button" class="button-secondary" aria-label="Clear">Clear</button>
                       </div>
                     </form>
@@ -185,7 +192,7 @@ mysqli_close($conn);
             <h1 class="main-title">Add Tank 03 Data</h1>
             <div class="card-wrapper">
                 <div class="main-container">
-                      <form>
+                <form method="POST" action="DataInput.php">
                         <div class="input-box-1">
                           <label for="date" class="datename">Date</label>
                           <input type="date" id="date" name="date" class="datel">
@@ -195,7 +202,7 @@ mysqli_close($conn);
                           <input type="text" id="turtle" name="turtle" class="text">
                         </div>
                       <div class="button-wrapper">
-                        <button type="button" class="button-primary" aria-label="Add" name="tank3">Add</button>
+                        <button type="submit" class="button-primary" aria-label="Add" name="tank3">Add</button>
                         <button type="button" class="button-secondary" aria-label="Clear">Clear</button>
                       </div>
                     </form>
