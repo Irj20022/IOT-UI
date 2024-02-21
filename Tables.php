@@ -1,3 +1,16 @@
+<?php
+include 'config.php';
+$query = "SELECT * FROM tank01";
+$result = mysqli_query($conn, $query);
+
+$query2 = "SELECT * FROM tank02";
+$result2 = mysqli_query($conn, $query2);
+
+$query3 = "SELECT * FROM tank03";
+$result3 = mysqli_query($conn, $query3);
+
+?>
+
 <html>
     <head>
         <title>Dashboard</title>
@@ -59,100 +72,94 @@
             </div>
             </div>
 <!--First table card-->
-          <div class="tabular-wrapper">
-            <h3 class="main-title">Tank 01</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Number of Turtles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>05/12/2024</td>
-                        <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>05/12/2024</td>
-                        <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>05/12/2024</td>
-                        <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>05/12/2024</td>
-                        <td>25</td>
-                        </tr><tr>
-                            <td>05/12/2024</td>
-                        <td>25</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-          </div>
+<div class="tabular-wrapper">
+  <h3 class="main-title">Tank  01</h3>
+  <div class="table-container">
+      <table>
+          <thead>
+              <tr>
+                  <th>Date</th>
+                  <th>Number of Turtles</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          if (mysqli_num_rows($result) >  0) {
+              // Output each row of data into the table
+              while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<tr>';
+                  echo '<td>' . $row["date"] . '</td>'; // Replace with actual column name
+                  echo '<td>' . $row["numberOfTurtles"] . '</td>'; // Replace with actual column name
+                  echo '</tr>';
+              }
+          } else {
+              echo '<tr><td colspan="2">No data available</td></tr>';
+          }
+          ?>
+          </tbody>
+      </table>
+  </div>
+</div>
 <!--First table ends-->
 <!--Second table card-->
-            <div class="tabular-wrapper">
-                <h3 class="main-title">Tank 02</h3>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Number of Turtles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-          </div>
+<div class="tabular-wrapper">
+    <h3 class="main-title">Tank  02</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Number of Turtles</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            if (mysqli_num_rows($result) >   0) {
+                // Output each row of data into the table
+                while ($row = mysqli_fetch_assoc($result2)) {
+                    echo '<tr>';
+                    echo '<td>' . $row["date"] . '</td>'; // Replace with actual column name
+                    echo '<td>' . $row["numberOfTurtles"] . '</td>'; // Replace with actual column name
+                    echo '</tr>';
+                }
+            } else {
+                echo '<tr><td colspan="2">No data available</td></tr>';
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <!--Second table ends-->
-<!--Third table card-->
-            <div class="tabular-wrapper">
-                <h3 class="main-title">Tank 03</h3>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Number of Turtles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>05/12/2024</td>
-                            <td>25</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-<!--Third table ends-->
 
+<div class="tabular-wrapper">
+    <h3 class="main-title">Tank   03</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Number of Turtles</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            if (mysqli_num_rows($result) >   0) {
+                // Output each row of data into the table
+                while ($row = mysqli_fetch_assoc($result3)) {
+                    echo '<tr>';
+                    echo '<td>' . $row["date"] . '</td>'; // Replace with actual column name
+                    echo '<td>' . $row["numberOfTurtles"] . '</td>'; // Replace with actual column name
+                    echo '</tr>';
+                }
+            } else {
+                echo '<tr><td colspan="2">No data available</td></tr>';
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
         </div>
 <!-- Main content ends-->
